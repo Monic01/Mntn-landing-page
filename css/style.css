@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 a {
@@ -39,9 +40,20 @@ header ul li:last-child {
   height: 2px;
   background-color: black;
   transform: translate(0, -200%);
+  background-color: #fbd784;
 }
 
-.hero {
+.accent-color {
+  color: #fbd784;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/picture/BG\ Hero.svg);
+}
+
+.hero .hero-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,8 +63,8 @@ header ul li:last-child {
   text-transform: uppercase;
 }
 .hero .hero-title h2 {
-  font-size: 40px;
-  width: 60%;
+  font-size: 54px;
+  width: 50%;
   margin: 10px 0;
 }
 
