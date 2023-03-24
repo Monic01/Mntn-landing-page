@@ -6,6 +6,7 @@
 }
 
 body {
+  width: 100%;
   max-width: 1920px;
   color: white;
   background-color: #0b1d26;
