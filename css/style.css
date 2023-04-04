@@ -112,15 +112,49 @@ header h1 {
   justify-content: center;
   align-items: center;
 }
-.hero .hero-container {
+.hero img {
+  width: 100%;
+}
+.hero .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.hero .hero-hg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+.hero .hero-mg {
+  position: absolute;
+  top: 466px;
+  left: 0;
+  z-index: -2;
+}
+.hero .hero-vg {
+  position: absolute;
+  top: 768px;
+  left: 0;
+  z-index: -1;
+}
+.hero .content-bg {
+  position: absolute;
+  top: 1200px;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-container {
   position: relative;
 }
-.hero .hero-container .hero-title {
+.hero-container .hero-title {
   max-width: 700px;
   font-size: 54px;
   margin: 50px 0;
 }
-.hero .hero-container .hero-arrow {
+.hero-container .hero-arrow {
   width: 125px;
   height: 25px;
   display: inline-block;
@@ -133,20 +167,28 @@ header h1 {
 .contents {
   padding: 0 229px;
 }
-.contents .content {
+
+.content {
+  margin-bottom: 200px;
   height: 720px;
-  position: relative;
   display: flex;
+  justify-content: space-between;
 }
-.contents .content .content-info {
+.content .content-info {
   flex: 1.7;
   padding: 140px;
+  position: relative;
 }
-.contents .content .content-info .content-title {
+.content .content-info .content-title {
+  width: 50%;
   margin: 27px 0;
   font-size: 40px;
 }
-.contents .content .content-info .content-more {
+.content .content-info .content-text {
+  width: 75%;
+  line-height: 24px;
+}
+.content .content-info .content-more {
   width: 127px;
   display: inline-block;
   margin-top: 27px;
@@ -156,11 +198,17 @@ header h1 {
   background-size: 24px 16px;
   color: #fbd784;
 }
-.contents .content .content-picture {
+.content .content-picture {
   flex: 1;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.content-info > .title-upper {
+  position: absolute;
+  top: 18%;
+  left: 14%;
 }
 
 .content2 {
@@ -180,5 +228,39 @@ header h1 {
 }
 
 footer {
+  height: 280px;
+  margin-bottom: 120px;
   padding: 0 229px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-left .footer-title {
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+.footer-left > p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-right {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-right li:first-child {
+  color: #fbd784;
+  margin-bottom: 24px;
+}
+.footer-right li:not(:first-child) {
+  font-size: 14px;
+  margin-bottom: 16px;
 }

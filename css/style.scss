@@ -268,57 +268,103 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  .hero-container {
-    position: relative;
-    .hero-title {
-      max-width: 700px;
-      font-size: 54px;
-      margin: 50px 0;
-    }
-    .hero-arrow {
-      width: 125px;
-      height: 25px;
-
-      display: inline-block;
-      background-image: url("/picture/arrow_downward_24px.svg");
-      background-repeat: no-repeat;
-      background-position: 90px;
-      background-size: 14px 20px;
-    }
+  img {
+    width: 100%;
+  }
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .hero-hg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  .hero-mg {
+    position: absolute;
+    top: 466px;
+    left: 0;
+    z-index: -2;
+  }
+  .hero-vg {
+    position: absolute;
+    top: 768px;
+    left: 0;
+    z-index: -1;
+  }
+  .content-bg {
+    position: absolute;
+    top: 1200px;
+    left: 0;
+    z-index: -1;
   }
 }
+.hero-container {
+  position: relative;
+  .hero-title {
+    max-width: 700px;
+    font-size: 54px;
+    margin: 50px 0;
+  }
+  .hero-arrow {
+    width: 125px;
+    height: 25px;
+
+    display: inline-block;
+    background-image: url("/picture/arrow_downward_24px.svg");
+    background-repeat: no-repeat;
+    background-position: 90px;
+    background-size: 14px 20px;
+  }
+}
+
 .contents {
   padding: 0 229px;
-  .content {
-    height: 720px;
+}
+.content {
+  margin-bottom: 200px;
+  height: 720px;
+  display: flex;
+  justify-content: space-between;
+  .content-info {
+    flex: 1.7;
+    padding: 140px;
     position: relative;
-
-    display: flex;
-    .content-info {
-      flex: 1.7;
-      padding: 140px;
-      .content-title {
-        margin: 27px 0;
-        font-size: 40px;
-      }
-      .content-more {
-        width: 127px;
-        display: inline-block;
-        margin-top: 27px;
-        background-image: url(/picture/arrow_downward_24px.png);
-        background-repeat: no-repeat;
-        background-position: 90px 5px;
-        background-size: 24px 16px;
-        color: $accent-color;
-      }
+    .content-title {
+      width: 50%;
+      margin: 27px 0;
+      font-size: 40px;
     }
-    .content-picture {
-      flex: 1;
-      background-position: center;
-      background-size: contain;
+    .content-text {
+      width: 75%;
+      line-height: 24px;
+    }
+    .content-more {
+      width: 127px;
+      display: inline-block;
+      margin-top: 27px;
+      background-image: url(/picture/arrow_downward_24px.png);
       background-repeat: no-repeat;
+      background-position: 90px 5px;
+      background-size: 24px 16px;
+      color: $accent-color;
     }
   }
+  .content-picture {
+    flex: 1;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.content-info > .title-upper {
+  position: absolute;
+  top: 18%;
+  left: 14%;
 }
 .content2 {
   flex-flow: row-reverse;
@@ -339,5 +385,40 @@ header {
   }
 }
 footer {
+  height: 280px;
+  margin-bottom: 120px;
   padding: 0 229px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-left {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .footer-title {
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+  > p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+.footer-right {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  li {
+    &:first-child {
+      color: $accent-color;
+
+      margin-bottom: 24px;
+    }
+    &:not(:first-child) {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+  }
 }
