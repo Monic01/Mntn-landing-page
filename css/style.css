@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -129,7 +133,7 @@ header h1 {
 }
 .hero .hero-mg {
   position: absolute;
-  top: 466px;
+  top: 290px;
   left: 0;
   z-index: -2;
 }
@@ -141,7 +145,7 @@ header h1 {
 }
 .hero .content-bg {
   position: absolute;
-  top: 1200px;
+  top: 990px;
   left: 0;
   z-index: -1;
 }
@@ -169,14 +173,15 @@ header h1 {
 }
 
 .content {
-  margin-bottom: 200px;
+  padding-top: 200px;
+  margin: 200px 0;
   height: 720px;
   display: flex;
   justify-content: space-between;
 }
 .content .content-info {
   flex: 1.7;
-  padding: 140px;
+  padding: 130px;
   position: relative;
 }
 .content .content-info .content-title {
@@ -207,18 +212,17 @@ header h1 {
 
 .content-info > .title-upper {
   position: absolute;
-  top: 18%;
-  left: 14%;
-}
-
-.content2 {
-  flex-flow: row-reverse;
+  top: 25%;
+  left: 13%;
 }
 
 .content1 .content-picture {
   background-image: url(/picture/01.svg);
 }
 
+.content2 {
+  flex-flow: row-reverse;
+}
 .content2 .content-picture {
   background-image: url(/picture/02.svg);
 }
